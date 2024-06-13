@@ -15,49 +15,62 @@ public class Libro {
     private String autor;
     private String isbn;
     private int anio;
-    private int publicacion;
+    private int edicion;
     private String editorial;
+
+	public String getEditorial() {
+		return editorial;
+	}
+
+	public void setEditorial(String editorial) {
+		this.editorial = editorial;
+	}
+
+	public int getEdicion() {
+		return edicion;
+	}
+
+	public void setEdicion(int edicion) {
+		this.edicion = edicion;
+	}
+
+	public int getAnio() {
+		return anio;
+	}
+
+	public void setAnio(int anio) {
+		this.anio = anio;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
-	}
-	public String getTitulo() {
-		return titulo;
-	}
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-	public String getAutor() {
-		return autor;
-	}
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
-	public String getIsbn() {
-		return isbn;
-	}
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
-	}
-	public int getPublicacion() {
-		return publicacion;
-	}
-	public void setPublicacion(int publicacion) {
-		this.publicacion = publicacion;
-	}
-	public String getEditorial() {
-		return editorial;
-	}
-	public void setEditorial(String editorial) {
-		this.editorial = editorial;
-	}
-	public int getAnio() {
-		return anio;
-	}
-	public void setAnio(int anio) {
-		this.anio = anio;
 	}
 }

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>net.unir.grupo-12</groupId>
-	<artifactId>buscador</artifactId>
+	<artifactId>ms-buscador</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ms-buscador</name>
 	<description>Microservicio para operaciones CRUD de libros</description>
@@ -46,6 +46,7 @@
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.0.4</version>
         </dependency>
+
 	</dependencies>
 
 	<build>

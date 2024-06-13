@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import net.unir.grupo_12.buscador.entity.Libro;
 import net.unir.grupo_12.buscador.repository.LibroRepository;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
 public class LibroService {
@@ -38,8 +39,8 @@ public class LibroService {
     public List<Libro> searchByAnio(int anio){
     	return libroRepository.findByAnio(anio);
     }
-    public List<Libro> searchByPublicacion(int publicacion) {
-        return libroRepository.findByPublicacion(publicacion);
+    public List<Libro> searchByPublicacion(int edicion) {
+        return libroRepository.findByEdicion(edicion);
     }
     public List<Libro> searchByEditorial(String editorial) {
         return libroRepository.findByEditorial(editorial);

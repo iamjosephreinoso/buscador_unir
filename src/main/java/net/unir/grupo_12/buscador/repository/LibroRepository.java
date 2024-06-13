@@ -7,10 +7,11 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LibroRepository extends JpaRepository<Libro, Long>  {
+
 	List<Libro> findByTitulo(String titulo);
     List<Libro> findByAutor(String autor);
     List<Libro> findByIsbn(String isbn);
     List<Libro> findByAnio(int anio);
-    List<Libro> findByPublicacion(int publicacion);
+    List<Libro> findByEdicion(int edicion);
     List<Libro> findByEditorial(String editorial);
 }

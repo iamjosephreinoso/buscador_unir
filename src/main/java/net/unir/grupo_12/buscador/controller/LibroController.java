@@ -1,6 +1,11 @@
 package net.unir.grupo_12.buscador.controller;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+
+import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -43,7 +48,7 @@ public class LibroController {
             libro.setAutor(libroDetails.getAutor());
             libro.setIsbn(libroDetails.getIsbn());
             libro.setAnio(libroDetails.getAnio());
-            libro.setPublicacion(libroDetails.getPublicacion());
+            libro.setEdicion(libroDetails.getEdicion());
             libro.setEditorial(libroDetails.getEditorial());
             return ResponseEntity.ok(libroService.saveLibro(libro));
         } else {
@@ -67,7 +72,7 @@ public class LibroController {
             @RequestParam(required = false) String autor,
             @RequestParam(required = false) String isbn,
             @RequestParam(required = false) Integer anio,
-            @RequestParam(required = false) Integer publicacion,
+            @RequestParam(required = false) Integer edicion,
             @RequestParam(required = false) String editorial) {
         if (titulo != null) {
             return libroService.searchByTitulo(titulo);
@@ -77,8 +82,8 @@ public class LibroController {
             return libroService.searchByIsbn(isbn);
         } else if (anio != null) {
             return libroService.searchByAnio(anio);
-        } else if (publicacion != null) {
-            return libroService.searchByPublicacion(publicacion);
+        } else if (edicion != null) {
+            return libroService.searchByPublicacion(edicion);
         } else if (editorial != null) {
             return libroService.searchByEditorial(editorial);
         } else {
