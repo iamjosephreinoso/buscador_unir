@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import net.unir.grupo_12.buscador.service.LibroService;
 
 @RestController
 @RequestMapping("/api/libros")
+@Tag(name = "Libros", description = "Endpoint de Libros")
 public class LibroController {
 	
 	@Autowired
