@@ -1,0 +1,1 @@
+INSERT INTO libro (titulo, autor, isbn, anio, edicion, editorial) VALUES ('Cien años de soledad', 'Gabriel García Márquez', '9788437614688', 1967, 1, 'Editorial Sudamericana');
