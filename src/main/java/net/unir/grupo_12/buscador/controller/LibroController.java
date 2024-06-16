@@ -18,13 +18,22 @@ import net.unir.grupo_12.buscador.service.LibroService;
 @RequestMapping("/api/libros")
 @Tag(name = "Libros", description = "Endpoint de Libros")
 public class LibroController {
-	
-	@Autowired
+
+    @Autowired
     private LibroService libroService;
 
     @GetMapping
-    public List<Libro> getAllLibros() {
-        return libroService.getAllLibros();
+    public List<Libro> getAllLibros(
+            @RequestParam(required = false) String titulo,
+            @RequestParam(required = false) String autor,
+            @RequestParam(required = false) String isbn,
+            @RequestParam(required = false) Integer anio,
+            @RequestParam(required = false) Integer edicion,
+            @RequestParam(required = false) String editorial
+    ) {
+        return libroService.getAllLibros(
+                titulo, autor, isbn, anio, edicion, editorial
+        );
     }
 
     @GetMapping("/{id}")
@@ -67,30 +76,4 @@ public class LibroController {
             return ResponseEntity.notFound().build();
         }
     }
-
-    @GetMapping("/search")
-    public List<Libro> searchLibros(
-            @RequestParam(required = false) String titulo,
-            @RequestParam(required = false) String autor,
-            @RequestParam(required = false) String isbn,
-            @RequestParam(required = false) Integer anio,
-            @RequestParam(required = false) Integer edicion,
-            @RequestParam(required = false) String editorial) {
-        if (titulo != null) {
-            return libroService.searchByTitulo(titulo);
-        } else if (autor != null) {
-            return libroService.searchByAutor(autor);
-        } else if (isbn != null) {
-            return libroService.searchByIsbn(isbn);
-        } else if (anio != null) {
-            return libroService.searchByAnio(anio);
-        } else if (edicion != null) {
-            return libroService.searchByPublicacion(edicion);
-        } else if (editorial != null) {
-            return libroService.searchByEditorial(editorial);
-        } else {
-            return libroService.getAllLibros();
-        }
-    }
-
 }
