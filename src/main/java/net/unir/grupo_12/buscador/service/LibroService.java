@@ -1,7 +1,7 @@
 package net.unir.grupo_12.buscador.service;
 
-import java.util.List;
-
+import net.unir.grupo_12.buscador.entity.Libro;
+import net.unir.grupo_12.buscador.repository.LibroRepository;
 import net.unir.grupo_12.buscador.utils.SearchCriteria;
 import net.unir.grupo_12.buscador.utils.SearchOperation;
 import net.unir.grupo_12.buscador.utils.SearchStatement;
@@ -9,8 +9,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import net.unir.grupo_12.buscador.entity.Libro;
-import net.unir.grupo_12.buscador.repository.LibroRepository;
+import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class LibroService {
@@ -22,7 +22,7 @@ public class LibroService {
             String titulo,
             String autor,
             String isbn,
-            Integer anio,
+            LocalDate fechaPublicacion,
             Integer edicion,
             String editorial
     ) {
@@ -36,8 +36,8 @@ public class LibroService {
         if (StringUtils.isNotBlank(isbn)) {
             spec.add(new SearchStatement("isbn", isbn, SearchOperation.MATCH));
         }
-        if (anio != null) {
-            spec.add(new SearchStatement("anio", anio, SearchOperation.EQUAL));
+        if (fechaPublicacion != null) {
+            spec.add(new SearchStatement("fechaPublicacion", fechaPublicacion, SearchOperation.EQUAL));
         }
         if (edicion != null) {
             spec.add(new SearchStatement("edicion", edicion, SearchOperation.EQUAL));

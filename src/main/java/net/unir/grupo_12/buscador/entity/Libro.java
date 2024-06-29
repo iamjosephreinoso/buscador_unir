@@ -1,73 +1,28 @@
 package net.unir.grupo_12.buscador.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.time.LocalDate;
+
+@Getter
+@Setter
 @Entity
+@Table(name = "libros")
 public class Libro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String titulo;
-    private String autor;
+    @Column(unique = true, length = 20, nullable = false)
     private String isbn;
-    private int anio;
     private int edicion;
+    private String autor;
+    private String titulo;
+    private String genero;
+    private String portada;
     private String editorial;
+    private LocalDate fechaPublicacion;
 
-	public String getEditorial() {
-		return editorial;
-	}
-
-	public void setEditorial(String editorial) {
-		this.editorial = editorial;
-	}
-
-	public int getEdicion() {
-		return edicion;
-	}
-
-	public void setEdicion(int edicion) {
-		this.edicion = edicion;
-	}
-
-	public int getAnio() {
-		return anio;
-	}
-
-	public void setAnio(int anio) {
-		this.anio = anio;
-	}
-
-	public String getIsbn() {
-		return isbn;
-	}
-
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
-	}
-
-	public String getAutor() {
-		return autor;
-	}
-
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
-
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 }

@@ -1,18 +1,14 @@
 package net.unir.grupo_12.buscador.controller;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import net.unir.grupo_12.buscador.entity.Libro;
+import net.unir.grupo_12.buscador.service.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import net.unir.grupo_12.buscador.entity.Libro;
-import net.unir.grupo_12.buscador.service.LibroService;
+import java.time.LocalDate;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/libros")
@@ -27,12 +23,12 @@ public class LibroController {
             @RequestParam(required = false) String titulo,
             @RequestParam(required = false) String autor,
             @RequestParam(required = false) String isbn,
-            @RequestParam(required = false) Integer anio,
+            @RequestParam(required = false) LocalDate fechaPublicacion,
             @RequestParam(required = false) Integer edicion,
             @RequestParam(required = false) String editorial
     ) {
         return libroService.getAllLibros(
-                titulo, autor, isbn, anio, edicion, editorial
+                titulo, autor, isbn, fechaPublicacion, edicion, editorial
         );
     }
 
@@ -58,7 +54,9 @@ public class LibroController {
             libro.setTitulo(libroDetails.getTitulo());
             libro.setAutor(libroDetails.getAutor());
             libro.setIsbn(libroDetails.getIsbn());
-            libro.setAnio(libroDetails.getAnio());
+            libro.setPortada(libro.getPortada());
+            libro.setGenero(libroDetails.getGenero());
+            libro.setFechaPublicacion(libroDetails.getFechaPublicacion());
             libro.setEdicion(libroDetails.getEdicion());
             libro.setEditorial(libroDetails.getEditorial());
             return ResponseEntity.ok(libroService.saveLibro(libro));
