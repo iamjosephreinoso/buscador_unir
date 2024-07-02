@@ -4,9 +4,11 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import net.unir.grupo_12.buscador.entity.Libro;
 import net.unir.grupo_12.buscador.service.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -16,7 +18,7 @@ import java.util.List;
 public class LibroController {
 
     @Autowired
-    private LibroService libroService;
+    private LibroService service;
 
     @GetMapping
     public List<Libro> getAllLibros(
@@ -27,14 +29,12 @@ public class LibroController {
             @RequestParam(required = false) Integer edicion,
             @RequestParam(required = false) String editorial
     ) {
-        return libroService.getAllLibros(
-                titulo, autor, isbn, fechaPublicacion, edicion, editorial
-        );
+        return service.findAll();
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Libro> getLibroById(@PathVariable Long id) {
-        Libro libro = libroService.getLibroById(id);
+    @GetMapping("{id}")
+    public ResponseEntity<Libro> findById(@PathVariable String id) {
+        Libro libro = service.findById(id);
         if (libro != null) {
             return ResponseEntity.ok(libro);
         } else {
@@ -43,35 +43,31 @@ public class LibroController {
     }
 
     @PostMapping
-    public Libro createLibro(@RequestBody Libro libro) {
-        return libroService.saveLibro(libro);
+    @ResponseStatus(HttpStatus.CREATED)
+    public void create(@RequestBody Libro libro) {
+        service.save(libro);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Libro> updateLibro(@PathVariable Long id, @RequestBody Libro libroDetails) {
-        Libro libro = libroService.getLibroById(id);
-        if (libro != null) {
-            libro.setTitulo(libroDetails.getTitulo());
-            libro.setAutor(libroDetails.getAutor());
-            libro.setIsbn(libroDetails.getIsbn());
-            libro.setPortada(libro.getPortada());
-            libro.setGenero(libroDetails.getGenero());
-            libro.setFechaPublicacion(libroDetails.getFechaPublicacion());
-            libro.setEdicion(libroDetails.getEdicion());
-            libro.setEditorial(libroDetails.getEditorial());
-            return ResponseEntity.ok(libroService.saveLibro(libro));
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    @PutMapping("{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void update(@NotNull @PathVariable String id, @RequestBody Libro libro) {
+        service.save(Libro.builder()
+                .id(id)
+                .titulo(libro.getTitulo())
+                .autor(libro.getAutor())
+                .isbn(libro.getIsbn())
+                .fechaPublicacion(libro.getFechaPublicacion())
+                .editorial(libro.getEditorial())
+                .edicion(libro.getEdicion())
+                .portada(libro.getPortada())
+                .genero(libro.getGenero())
+                .build());
     }
+
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteLibro(@PathVariable Long id) {
-        if (libroService.getLibroById(id) != null) {
-            libroService.deleteLibro(id);
-            return ResponseEntity.noContent().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable String id) {
+        service.deleteById(id);
     }
 }

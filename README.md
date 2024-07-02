@@ -11,6 +11,9 @@ Para crear un índice con datos de prueba, sigue estos pasos:
          "Autor": {
             "type": "search_as_you_type"
          },
+         "Portada": {
+            "type": "text"
+         },
          "Genero": {
             "type": "keyword"
          },
