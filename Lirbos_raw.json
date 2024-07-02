@@ -1,40 +1,40 @@
 {"index":{"_index":"libros"}}
-{ "Titulo": "Cien años de soledad", "Autor": "Gabriel García Márquez", "Portada": "/public/portadas/cien_anos_de_soledad.jpg", "Genero": "Realismo mágico", "isbn": "978-0-06-088328-7", "FechaPublicacion": "1967-01-01", "Edicion": 1, "Editorial": "Harper Perennial Modern Classics" }
+{ "Titulo": "Cien años de soledad", "Autor": "Gabriel García Márquez", "Portada": "/public/portadas/cien_anos_de_soledad.jpg", "Genero": "Realismo mágico", "ISBN": "978-0-06-088328-7", "FechaPublicacion": "1967-01-01", "Edicion": 1, "Editorial": "Harper Perennial Modern Classics" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "Don Quijote de la Mancha", "Autor": "Miguel de Cervantes", "Portada": "/public/portadas/don_quijote.jpg", "Genero": "Novela", "isbn": "978-1-85326-036-0", "FechaPublicacion": "1605-01-01", "Edicion": 1, "Editorial": "Wordsworth Editions" }
+{ "Titulo": "Don Quijote de la Mancha", "Autor": "Miguel de Cervantes", "Portada": "/public/portadas/don_quijote.jpg", "Genero": "Novela", "ISBN": "978-1-85326-036-0", "FechaPublicacion": "1605-01-01", "Edicion": 1, "Editorial": "Wordsworth Editions" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "1984", "Autor": "George Orwell", "Portada": "/public/portadas/1984.jpg", "Genero": "Distopía", "isbn": "978-0-452-28423-4", "FechaPublicacion": "1949-01-01", "Edicion": 1, "Editorial": "Signet Classics" }
+{ "Titulo": "1984", "Autor": "George Orwell", "Portada": "/public/portadas/1984.jpg", "Genero": "Distopía", "ISBN": "978-0-452-28423-4", "FechaPublicacion": "1949-01-01", "Edicion": 1, "Editorial": "Signet Classics" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "El nombre de la rosa", "Autor": "Umberto Eco", "Portada": "/public/portadas/el_nombre_de_la_rosa.jpg", "Genero": "Misterio", "isbn": "978-0-15-600131-1", "FechaPublicacion": "1980-01-01", "Edicion": 1, "Editorial": "Mariner Books" }
+{ "Titulo": "El nombre de la rosa", "Autor": "Umberto Eco", "Portada": "/public/portadas/el_nombre_de_la_rosa.jpg", "Genero": "Misterio", "ISBN": "978-0-15-600131-1", "FechaPublicacion": "1980-01-01", "Edicion": 1, "Editorial": "Mariner Books" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "Rayuela", "Autor": "Julio Cortázar", "Portada": "/public/portadas/rayuela.jpg", "Genero": "Novela", "isbn": "978-0-394-71021-7", "FechaPublicacion": "1963-01-01", "Edicion": 1, "Editorial": "Pantheon Books" }
+{ "Titulo": "Rayuela", "Autor": "Julio Cortázar", "Portada": "/public/portadas/rayuela.jpg", "Genero": "Novela", "ISBN": "978-0-394-71021-7", "FechaPublicacion": "1963-01-01", "Edicion": 1, "Editorial": "Pantheon Books" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "La sombra del viento", "Autor": "Carlos Ruiz Zafón", "Portada": "/public/portadas/la_sombra_del_viento.jpg", "Genero": "Novela", "isbn": "978-0-14-303490-2", "FechaPublicacion": "2001-01-01", "Edicion": 1, "Editorial": "Penguin Books" }
+{ "Titulo": "La sombra del viento", "Autor": "Carlos Ruiz Zafón", "Portada": "/public/portadas/la_sombra_del_viento.jpg", "Genero": "Novela", "ISBN": "978-0-14-303490-2", "FechaPublicacion": "2001-01-01", "Edicion": 1, "Editorial": "Penguin Books" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "El amor en los tiempos del cólera", "Autor": "Gabriel García Márquez", "Portada": "/public/portadas/amor_en_los_tiempos_del_colera.jpg", "Genero": "Novela", "isbn": "978-0-307-38935-8", "FechaPublicacion": "1985-01-01", "Edicion": 1, "Editorial": "Alfred A. Knopf" }
+{ "Titulo": "El amor en los tiempos del cólera", "Autor": "Gabriel García Márquez", "Portada": "/public/portadas/amor_en_los_tiempos_del_colera.jpg", "Genero": "Novela", "ISBN": "978-0-307-38935-8", "FechaPublicacion": "1985-01-01", "Edicion": 1, "Editorial": "Alfred A. Knopf" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "Crimen y castigo", "Autor": "Fiódor Dostoyevski", "Portada": "/public/portadas/crimen_y_castigo.jpg", "Genero": "Novela", "isbn": "978-0-14-305814-3", "FechaPublicacion": "1866-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
+{ "Titulo": "Crimen y castigo", "Autor": "Fiódor Dostoyevski", "Portada": "/public/portadas/crimen_y_castigo.jpg", "Genero": "Novela", "ISBN": "978-0-14-305814-3", "FechaPublicacion": "1866-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "Orgullo y prejuicio", "Autor": "Jane Austen", "Portada": "/public/portadas/orgullo_y_prejuicio.jpg", "Genero": "Novela", "isbn": "978-0-19-280238-5", "FechaPublicacion": "1813-01-01", "Edicion": 1, "Editorial": "Oxford University Press" }
+{ "Titulo": "Orgullo y prejuicio", "Autor": "Jane Austen", "Portada": "/public/portadas/orgullo_y_prejuicio.jpg", "Genero": "Novela", "ISBN": "978-0-19-280238-5", "FechaPublicacion": "1813-01-01", "Edicion": 1, "Editorial": "Oxford University Press" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "Matar a un ruiseñor", "Autor": "Harper Lee", "Portada": "/public/portadas/matar_a_un_ruisenor.jpg", "Genero": "Novela", "isbn": "978-0-06-112008-4", "FechaPublicacion": "1960-01-01", "Edicion": 1, "Editorial": "J.B. Lippincott & Co." }
+{ "Titulo": "Matar a un ruiseñor", "Autor": "Harper Lee", "Portada": "/public/portadas/matar_a_un_ruisenor.jpg", "Genero": "Novela", "ISBN": "978-0-06-112008-4", "FechaPublicacion": "1960-01-01", "Edicion": 1, "Editorial": "J.B. Lippincott & Co." }
 {"index":{"_index":"libros"}}
-{ "Titulo": "El retrato de Dorian Gray", "Autor": "Oscar Wilde", "Portada": "/public/portadas/retrato_de_dorian_gray.jpg", "Genero": "Ficción", "isbn": "978-0-14-143957-0", "FechaPublicacion": "1890-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
+{ "Titulo": "El retrato de Dorian Gray", "Autor": "Oscar Wilde", "Portada": "/public/portadas/retrato_de_dorian_gray.jpg", "Genero": "Ficción", "ISBN": "978-0-14-143957-0", "FechaPublicacion": "1890-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "Los miserables", "Autor": "Victor Hugo", "Portada": "/public/portadas/los_miserables.jpg", "Genero": "Novela", "isbn": "978-0-14-044430-8", "FechaPublicacion": "1862-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
+{ "Titulo": "Los miserables", "Autor": "Victor Hugo", "Portada": "/public/portadas/los_miserables.jpg", "Genero": "Novela", "ISBN": "978-0-14-044430-8", "FechaPublicacion": "1862-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "El gran Gatsby", "Autor": "F. Scott Fitzgerald", "Portada": "/public/portadas/el_gran_gatsby.jpg", "Genero": "Novela", "isbn": "978-0-7432-7356-5", "FechaPublicacion": "1925-01-01", "Edicion": 1, "Editorial": "Scribner" }
+{ "Titulo": "El gran Gatsby", "Autor": "F. Scott Fitzgerald", "Portada": "/public/portadas/el_gran_gatsby.jpg", "Genero": "Novela", "ISBN": "978-0-7432-7356-5", "FechaPublicacion": "1925-01-01", "Edicion": 1, "Editorial": "Scribner" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "Moby Dick", "Autor": "Herman Melville", "Portada": "/public/portadas/moby_dick.jpg", "Genero": "Aventura", "isbn": "978-0-14-243724-7", "FechaPublicacion": "1851-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
+{ "Titulo": "Moby Dick", "Autor": "Herman Melville", "Portada": "/public/portadas/moby_dick.jpg", "Genero": "Aventura", "ISBN": "978-0-14-243724-7", "FechaPublicacion": "1851-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "Guerra y paz", "Autor": "León Tolstói", "Portada": "/public/portadas/guerra_y_paz.jpg", "Genero": "Novela", "isbn": "978-0-14-303999-0", "FechaPublicacion": "1869-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
+{ "Titulo": "Guerra y paz", "Autor": "León Tolstói", "Portada": "/public/portadas/guerra_y_paz.jpg", "Genero": "Novela", "ISBN": "978-0-14-303999-0", "FechaPublicacion": "1869-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "La metamorfosis", "Autor": "Franz Kafka", "Portada": "/public/portadas/la_metamorfosis.jpg", "Genero": "Novela", "isbn": "978-0-14-310524-4", "FechaPublicacion": "1915-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
+{ "Titulo": "La metamorfosis", "Autor": "Franz Kafka", "Portada": "/public/portadas/la_metamorfosis.jpg", "Genero": "Novela", "ISBN": "978-0-14-310524-4", "FechaPublicacion": "1915-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "Fahrenheit 451", "Autor": "Ray Bradbury", "Portada": "/public/portadas/fahrenheit_451.jpg", "Genero": "Ciencia ficción", "isbn": "978-0-7432-4722-7", "FechaPublicacion": "1953-01-01", "Edicion": 1, "Editorial": "Simon & Schuster" }
+{ "Titulo": "Fahrenheit 451", "Autor": "Ray Bradbury", "Portada": "/public/portadas/fahrenheit_451.jpg", "Genero": "Ciencia ficción", "ISBN": "978-0-7432-4722-7", "FechaPublicacion": "1953-01-01", "Edicion": 1, "Editorial": "Simon & Schuster" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "El Señor de los Anillos", "Autor": "J.R.R. Tolkien", "Portada": "/public/portadas/el_senor_de_los_anillos.jpg", "Genero": "Fantasía", "isbn": "978-0-618-00222-8", "FechaPublicacion": "1954-01-01", "Edicion": 1, "Editorial": "Houghton Mifflin" }
+{ "Titulo": "El Señor de los Anillos", "Autor": "J.R.R. Tolkien", "Portada": "/public/portadas/el_senor_de_los_anillos.jpg", "Genero": "Fantasía", "ISBN": "978-0-618-00222-8", "FechaPublicacion": "1954-01-01", "Edicion": 1, "Editorial": "Houghton Mifflin" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "El hobbit", "Autor": "J.R.R. Tolkien", "Portada": "/public/portadas/el_hobbit.jpg", "Genero": "Fantasía", "isbn": "978-0-618-00221-1", "FechaPublicacion": "1937-01-01", "Edicion": 1, "Editorial": "Houghton Mifflin" }
+{ "Titulo": "El hobbit", "Autor": "J.R.R. Tolkien", "Portada": "/public/portadas/el_hobbit.jpg", "Genero": "Fantasía", "ISBN": "978-0-618-00221-1", "FechaPublicacion": "1937-01-01", "Edicion": 1, "Editorial": "Houghton Mifflin" }
 {"index":{"_index":"libros"}}
-{ "Titulo": "Cumbres Borrascosas", "Autor": "Emily Brontë", "Portada": "/public/portadas/cumbres_borrascosas.jpg", "Genero": "Novela", "isbn": "978-0-14-143955-6", "FechaPublicacion": "1847-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }
+{ "Titulo": "Cumbres Borrascosas", "Autor": "Emily Brontë", "Portada": "/public/portadas/cumbres_borrascosas.jpg", "Genero": "Novela", "ISBN": "978-0-14-143955-6", "FechaPublicacion": "1847-01-01", "Edicion": 1, "Editorial": "Penguin Classics" }

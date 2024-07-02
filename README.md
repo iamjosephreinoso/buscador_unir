@@ -17,7 +17,7 @@ Para crear un índice con datos de prueba, sigue estos pasos:
          "Genero": {
             "type": "keyword"
          },
-         "isbn": {
+         "ISBN": {
             "type": "text"
          },
          "FechaPublicacion": {
