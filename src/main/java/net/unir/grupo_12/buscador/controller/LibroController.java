@@ -3,7 +3,6 @@ package net.unir.grupo_12.buscador.controller;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import net.unir.grupo_12.buscador.entity.Libro;
 import net.unir.grupo_12.buscador.service.LibroService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,10 +16,14 @@ import java.util.List;
 @Tag(name = "Libros", description = "Endpoint de Libros")
 public class LibroController {
 
-    @Autowired
-    private LibroService service;
+    private final LibroService service;
+
+    public LibroController(LibroService service) {
+        this.service = service;
+    }
 
     @GetMapping
+    @ResponseStatus(HttpStatus.OK)
     public List<Libro> getAllLibros(
             @RequestParam(required = false) String titulo,
             @RequestParam(required = false) String autor,
@@ -33,6 +36,7 @@ public class LibroController {
     }
 
     @GetMapping("{id}")
+    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Libro> findById(@PathVariable String id) {
         Libro libro = service.findById(id);
         if (libro != null) {
@@ -65,7 +69,7 @@ public class LibroController {
     }
 
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable String id) {
         service.deleteById(id);

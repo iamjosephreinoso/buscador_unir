@@ -1,6 +1,7 @@
 package net.unir.grupo_12.buscador.service;
 
 import net.unir.grupo_12.buscador.entity.Libro;
+import net.unir.grupo_12.buscador.exception.NotFoundException;
 import net.unir.grupo_12.buscador.repository.LibroRepository;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,8 @@ public class LibroServiceImpl implements LibroService {
 
     @Override
     public Libro findById(String id) {
-        return repository.findById(id).orElse(null);
+        return repository.findById(id)
+                .orElseThrow(() -> new NotFoundException("No se encontro el Libro con id: " + id));
     }
 
     @Override
