@@ -9,6 +9,6 @@ RUN mvn clean package -DskipTests
 
 # Usamos una imagen de Openjdk
 FROM openjdk:21
-EXPOSE 8761
+EXPOSE 8081
 COPY --from=build /target/ms-buscador-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
