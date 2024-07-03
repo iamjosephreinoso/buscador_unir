@@ -15,10 +15,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 )
 @SpringBootApplication
 @EnableDiscoveryClient
-public class MsBuscadorApplication {
+public class Main {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsBuscadorApplication.class, args);
+		SpringApplication.run(Main.class, args);
 	}
 
 }

@@ -2,9 +2,10 @@ package net.unir.grupo_12.buscador.controller;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import net.unir.grupo_12.buscador.entity.Libro;
+import net.unir.grupo_12.buscador.response.LibrosQueryResponse;
 import net.unir.grupo_12.buscador.service.LibroService;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
@@ -24,26 +25,34 @@ public class LibroController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Libro> getAllLibros(
-            @RequestParam(required = false) String titulo,
-            @RequestParam(required = false) String autor,
+    public LibrosQueryResponse getAllLibros(
             @RequestParam(required = false) String isbn,
-            @RequestParam(required = false) LocalDate fechaPublicacion,
+            @RequestParam(required = false) String autor,
+            @RequestParam(required = false) String titulo,
             @RequestParam(required = false) Integer edicion,
-            @RequestParam(required = false) String editorial
+            @RequestParam(required = false) String editorial,
+            @RequestParam(required = false) List<String> generos,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaInicial,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaFinal,
+            @RequestParam(required = false, defaultValue = "0") Integer page
     ) {
-        return service.findAll();
+        return service.findAll(
+                titulo,
+                autor,
+                isbn,
+                generos,
+                fechaInicial,
+                fechaFinal,
+                edicion,
+                editorial,
+                page
+        );
     }
 
     @GetMapping("{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<Libro> findById(@PathVariable String id) {
-        Libro libro = service.findById(id);
-        if (libro != null) {
-            return ResponseEntity.ok(libro);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    public Libro findById(@PathVariable String id) {
+        return service.findById(id);
     }
 
     @PostMapping
